@@ -1,5 +1,7 @@
 package com.ywb.dao;
 
+import com.ywb.entity.User;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -12,7 +14,7 @@ import java.util.Random;
  * @date:
  * @version: V1.0
  */
-public class RandomCard {
+public class RandomCard extends User {
     Random random = new Random();
     SimpleDateFormat sdf = new SimpleDateFormat();
     public String getName() {

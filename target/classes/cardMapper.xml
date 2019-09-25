@@ -3,12 +3,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ywb.dao.CardDao">
-    <insert id="add" parameterType="User">
+    <insert id="add" parameterType="User" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
         insert into card(name, QQ, job, date, school, number_online, daily_link, oath, brother, where_know)
          values(#{name}, #{QQ}, #{job}, #{date}, #{school}, #{number_online}, #{daily_link}, #{oath}, #{brother},
          #{where_know})
     </insert>
-    <delete id="del" parameterType="Integer" >
+    <delete id="del" parameterType="Integer">
         delete from card where id=#{id}
     </delete>
     <update id="update" parameterType="User">
