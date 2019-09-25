@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--log4j本身日志打印级别为warn，每隔600秒重新读取配置文件-->
+<configuration status="WARN" monitorInterval="600">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss:SSS} [%t] %-5level %logger{36} %msg%n"/>
+        </Console>
+        <File name="MyFile" filename="E:\IDEA\springMybatis\log/test.log">
+            <PatternLayout pattern="%d{HH:mm:ss:SSS} [%t] %-5level %logger{36} %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="mylog" level="TRACE" additivity="false">
+            <AppenderRef ref="MyFile"/>
+        </Logger>
+        <Root level="ERROR">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</configuration>
