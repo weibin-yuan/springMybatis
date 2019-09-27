@@ -1,6 +1,7 @@
 package com.ywb.dao;
 
 import com.ywb.entity.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -11,6 +12,6 @@ public interface CardDao {
     List<User> getAll();
     User selectById(Integer id);
     User selectByName(String name);
-    User selectByNumber(int number);
+    User selectByNumber(@Param(value = "number_online") int number);
     int count();
 }

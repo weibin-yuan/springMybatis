@@ -21,10 +21,20 @@
         select * from card where id=#{id}
     </select>
     <select id="selectByName" resultType="User" parameterType="String">
-        select * from card where name=#{name}
+        select * from card
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="_parameter != null and _parameter != ' '.toString()">
+                and name = #{name}
+            </if>
+        </trim>
     </select>
     <select id="selectByNumber" resultType="User" parameterType="int">
-        select * from card where number_online=#{number_online}
+        select * from card
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="number_online != null and number_online != ' '">
+                and number_online = #{number_online}
+            </if>
+        </trim>
     </select>
     <select id="count" resultType="int">
         select count(*) from card

@@ -24,6 +24,10 @@ public class Main {
         CardDao card = (CardDao)context.getBean("cardMapper");
 //        User user = card.selectById(2);
 //        System.out.println(user);
+//        User user1 = card.selectByNumber(7240);
+//        System.out.println(user1);
+        User user2 = card.selectByName("元秀英");
+        System.out.println(user2);
 //        int a = card.count();
 //        System.out.println(a);
 
@@ -42,13 +46,13 @@ public class Main {
 //            System.out.println("插入失败");
 //        }
 
-        try {
-            card.del(17);
-            System.out.println(true);
-            logger.error("trace level");
-        }catch (Exception e) {
-            System.out.println(false);
-            logger.error("error level");
-        }
+//        try {
+//            card.del(17);
+//            System.out.println(true);
+//            logger.error("trace level");
+//        }catch (Exception e) {
+//            System.out.println(false);
+//            logger.error("error level");
+//        }
     }
 }
