@@ -19,6 +19,7 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
+//        用getLogger函数获取一个logger，记录日志
         Logger logger = LogManager.getLogger("mylog");
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         CardDao card = (CardDao)context.getBean("cardMapper");
