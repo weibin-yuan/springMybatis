@@ -23,19 +23,25 @@ public class Main {
         Logger logger = LogManager.getLogger("mylog");
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         CardDao card = (CardDao)context.getBean("cardMapper");
+//        根据ID查找
 //        User user = card.selectById(2);
 //        System.out.println(user);
+//        根据学号查找
 //        User user1 = card.selectByNumber(7240);
 //        System.out.println(user1);
+//        根据姓名查找
         User user2 = card.selectByName("元秀英");
         System.out.println(user2);
+//        获取表中记录总数
 //        int a = card.count();
 //        System.out.println(a);
 
+//        获取所有记录
 //        List<User> users;
 //        users = card.getAll();
 //        System.out.println(users);
 
+//        添加记录
 //        try {
 //            for (int i=1; i<=1; i++) {
 //                User rc = new RandomCard();
@@ -47,6 +53,7 @@ public class Main {
 //            System.out.println("插入失败");
 //        }
 
+//        删除记录
 //        try {
 //            card.del(17);
 //            System.out.println(true);
