@@ -57,7 +57,7 @@ public class Main {
 //        try {
 //            card.del(17);
 //            System.out.println(true);
-//            logger.error("trace level");
+//            logger.trace("trace level");
 //        }catch (Exception e) {
 //            System.out.println(false);
 //            logger.error("error level");
